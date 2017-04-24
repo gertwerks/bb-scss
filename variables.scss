@@ -1,0 +1,48 @@
+
+//Backgrounds
+	$body-bgcolor: #f8f8f8; //defualt #f8f8f8 (content area)
+	$window-bgcolor: #949494; //default #949494 (window background)
+
+//links
+	$link-color: #1874a4; //default #1874a4 - !ensure link color meets accesibility standards!
+
+//TopFrame
+
+	//bg colors
+	$header-bgcolor: #333; //default #333 (top frame)
+	$tab-indicator: #c56fd5; //default #c56fd5
+
+	//font colors
+	$tab-font-color: #cdcdcd; //default #cdcdcd
+	$tab-active-hover-font-color: #fff; //default #fff
+
+//Course Menu
+	//bg
+	$course-menu-bgcolor: #333; //default #333
+
+	//font colors
+	$course-menu-font-color: #fff; //default #fff
+	$course-menu-hover-font-color: #c56fd5; //default #c56fd5
+
+//Breadcrumbs
+	//bg
+	$breadcrumb-bgcolor: #fff; //default #fff
+
+	//font colors
+	$breadcrumb-font-color: #333; //default #333
+
+//Buttons
+	//primary (submit, ok, etc.)
+	$primary-button-bgcolor: #333; //default #333
+	$primary-button-bgcolor-hover: #fff; //default #FFF
+
+	//sceondary button (cancel, back, etc.)
+	$secondary-button-bgcolor:#dadada; //default #dadada
+	$secondary-button-bgcolor-hover: #fff; //default #fff
+
+
+//Alerts (Reciepts)
+	$positive-alert-bgcolor: #c56fd5; //default #c56fd5
+	$warning-alert-bgcolor: #26d6fd; //default #26d6fd
+
+
