@@ -51,7 +51,6 @@ table.bouncer td {
 #topFrame /*@branding - do not remove*/,
     /*---*/
 .bgBanner {
-    background-color: $header-bgcolor;
     background-position: 0 0px;
     background-repeat: no-repeat;
     color:#CCCCCC;
@@ -83,10 +82,11 @@ table.bouncer td {
 }
 
 .brandingImgWrap img {
-    left: 27px;
+    left: 20px;
     max-height: 50px;
+    max-width: 140px;
     position: absolute;
-    top: 30px;
+    top: 7px;
     z-index: 9001;
 }
 
@@ -105,7 +105,7 @@ table.bouncer td {
 /*Regular tabs*/
 .topTabs {
     padding: 0;
-    background-color: $header-bgcolor; /*@pal*/
+    background-color: #555; /*@pal*/
     -moz-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
     -webkit-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
     box-shadow: 0 -6px 17px #333 inset; /*@pal*/
@@ -175,8 +175,15 @@ table.bouncer td {
     padding-bottom: 0;
 }
 
+
+.appTabs a:hover, .appTabs a:focus {
+    color:#fff;
+}
+
 .appTabs a:hover span, .appTabs a:focus span {
     border: 0px !important;
+    color: #fff;
+
 }
 
 /*@branding - do not remove*/
@@ -417,365 +424,28 @@ table.bouncer td {
 }
 /* // end GLOBAL NAV // */
 
-#quick_links_wrap{
-    top:12px!important;
+#quick_links_wrap {
+    width: 20px;
+    overflow: hidden;
 }
 
-.quickLinksOnly #quick_links_wrap {
-  top: 0 !important;
+#quick_links_wrap:hover {
+    width: 100px;
+    overflow: visible;
+    left: -10px;
+    background: transparent;
+}
+
+#quick_links_wrap a {
+    position: absolute;
+    right: 0px;
 }
 
 #globalNavPageNavArea{
-    background:#232323;
+  background:#555;
 }
-
-/* @group APPLICATION TABS */
-
-/*Application tabs*/
-/*Regular tabs*/
-.appTabs a {
-    font-size: 110%;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    padding: 10px 1.2em 19px;
-    color: $tab-font-color;
-    z-index: 100;
-    white-space: nowrap;
-    position: relative;
-    border: 1px solid transparent;
-    border-width: 1px 1px 0;
-    -moz-border-radius: 0px 0px 0 0;
-    -webkit-border-radius: 0px 0px 0 0;
-    border-radius: 0px 0px 0 0;
-}
-
-/*@branding - do not remove*/
-#topTab {
-    background: transparent;
-    color: #666;
-}
-
-.appTabs a span {
-    padding-bottom: 1px;
-    border-bottom: 0px;
-}
-
-.topTabs-compact .appTabs a span {
-    padding-bottom: 0;
-}
-
-.appTabs a:hover, .appTabs a:focus {
-    color: $tab-active-hover-font-color;
-}
-
-.appTabs a:hover span, .appTabs a:focus span {
-    border-bottom: 1px double #FFF;
-}
-
-/*@branding - do not remove*/
-#topTabActive,
-.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
-    font-weight: bold;
-    z-index: 1000;
-    text-shadow: none;
-    color: $tab-active-hover-font-color;
-}
-
-.appTabs td.active {
-    border-bottom: 3px solid $tab-indicator;
-}
-
-.appTabs td {
-    padding-bottom: 14px !important
-}
-
-.appTabs .active a span, .appTabs .active a:hover span, .appTabs .active a:focus span {
-    border: 0;
-}
-
-.topTabs-compact .appTabs .active .hideoff,
-.topTabs-compact .appTabs .active a:hover .hideoff,
-.topTabs-compact .appTabs .active a:focus .hideoff {
-    border-width: 0 7px 7px;
-    margin-left: -7px;
-}
-
-.topTabs-compact .appTabs a,
-.topTabs-compact .appTabs .active a:hover,
-.topTabs-compact .appTabs .active a:focus {
-    font-size: 95%;
-    padding: 0.4em 1em .7em;
-}
-
-table.bouncer {
-    border-bottom: 1px solid #cdcdcd;
-}
-
-.global-nav-bar-wrap {
-    background-color: #000;
-    width: 100%;
-    height: 0px;
-}
-
-.global-nav-bar {
-    margin: 0px 10px;
-}
-
-.topTabs .tabWrapper-right {
-    height: 66px;
-}
-
-.topTabs .tabWrapper-right .appTabs {
-    height: 100%;
-}
-
-/*Rounding options*/
-.round1 a {
-    -moz-border-radius: 0px 0px 0 0;
-    -webkit-border-radius: 0px 0px 0 0;
-    border-radius: 0px 0px 0 0;
-}
-
-.round2 a {
-    -moz-border-radius: 12px 12px 0 0;
-    -webkit-border-radius: 12px 12px 0 0;
-    border-radius: 12px 12px 0 0;
-}
-
-/* @end */
-
-/* @group TOP FRAME LINKS (HOME, HELP, LOGOUT)
------------------------------------------------ */
-
-/*Top frame links*/
-
-.topGlobalLinks {
-    background-color: rgba(0, 0, 0, 0.15);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
-}
-
-.topGlobalLinks ul {
-    z-index: 1001;
-}
-
-.topGlobalLinks ul li {
-    color: #ccc;
-    display: inline-block;
-    margin: 0 0 0 -4px;
-}
-
-.topGlobalLinks ul li:first-child {
-    margin: 0;
-}
-
-#breadcrumbs ol li:nth-child(2) {
-    border-left: 1px solid #dadada;
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(3) {
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(4) {
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(5) {
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(6) {
-    padding: 2px 20px 0px 10px;
-}
-
-.topGlobalLinks a {
-    display: inline-block;
-    color: #ccc;
-    text-align: left;
-    padding: 3px 5px;
-    text-indent: -10000px;
-    min-width: 18px;
-    overflow: hidden;
-    background: none !important;
-}
-
-.topGlobalLinks a .link-icon {
-    background-image: url(images/utilicons_sprite_rev.png);
-    background-repeat: no-repeat;
-    display: block;
-    float: right;
-    height: 16px;
-    width: 16px;
-    overflow: hidden;
-}
-
-.topGlobalLinks .home .link-icon {
-    background-position: -129px 0;
-}
-
-.topGlobalLinks .home:hover .link-icon,
-.topGlobalLinks .home:focus .link-icon {
-    background-position: -129px -16px;
-}
-
-.topGlobalLinks .logout .link-icon {
-    display: none;
-}
-
-.topGlobalLinks .logout {
-    text-indent: 0;
-    padding: 2px 9px;
-    width: auto !important;
-}
-
-.topGlobalLinks .help .link-icon {
-    background-position: -145px 1px;
-}
-
-.topGlobalLinks .help:hover .link-icon,
-.topGlobalLinks .help:focus .link-icon {
-    background-position: -145px 1px;
-}
-
-.topGlobalLinks a:hover,
-.topGlobalLinks a:focus {
-    color: #eee;
-    background-color: rgba(0, 0, 0, 0.25) !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025";
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025);
-}
-
-/* @end TOP FRAME LINKS*/
-
-/* @group TOP FRAME HOT ITEMS
------------------------------------------------ */
-
-.hotItems {
-    position: relative;
-    margin-right: 3px;
-    width: 240px;
-    min-height: 28px;
-    color: #ddd;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.20);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
-}
-
-.hotSpots {
-    max-height: 46px;
-    overflow: auto;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 3px 3px 5px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.hotSpots li {
-    display: inline-block;
-    display: inline \9; /*IE8*/
-    padding: 0 0 2px;
-}
-
-.hotSpots a {
-    text-decoration: underline;
-    background: transparent;
-    color: #ddd;
-    display: inline-block;
-    padding: 0 6px 0 0;
-}
-
-.hotSpots li:after {
-    content: "\2022";
-    color: #999999;
-    position: relative;
-    right: 1px;
-}
-
-.hotSpots li:last-child:after {
-    content: none;
-}
-
-.hotSpots a:hover,
-.hotSpots a:focus {
-    color: #eee;
-}
-
-
-/* @group TOP FRAME
------------------------------------------------ */
-
-/* @group TOP FRAME LAYOUT */
-
-/*Branding image container.*/
-#topFrame /*@branding - do not remove*/,
-    /*---*/
-.bgBanner {
-    background-color: #555;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    color: #CCCCCC;
-}
-
-.brandingImgWrap a {
-    display: inline-block;
-    position: absolute;
-}
-
-.brandingImgWrap a:focus {
-    outline-color: #CCC;
-}
-
-.bannerImage {
-    max-height: 35px;
-}
-
-/*Branding image, hot spots and hot links are hidden when compact tabs are used*/
-.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap, .topTabs-compact .hotItems {
-    display: none;
-}
-
-/*Regular tabs*/
-.topTabs {
-    padding: 0;
-    background-color: $header-bgcolor;
-    box-shadow: none !important;
-    color: #FFFFFF !important;
-    height: 100% !important;
-}
-
-/*Compact tabs*/
-.topTabs-compact {
-    height: 52px;
-}
-
-/*Tab wrapper*/
-.tabWrapper-left, .tabWrapper-center, .tabWrapper-right {
-    width: auto;
-    padding: 0 28px;
-}
-
-/*Table that contains application tabs*/
-/*Regular tabs*/
-.appTabs {
-    width: auto;
-    position: relative;
-}
-
-.topTabs-compact .tabWrapper-left, .topTabs-compact .tabWrapper-center, .topTabs-compact .tabWrapper-right {
-    padding-top: 24px;
-}
-
-/* @end */
-
-/* @end TOP FRAME HOT*/
 
 /* @end TOP FRAME */
-
 /*All mobile and tablets*/
 @media only screen and (min-width:320px) and (max-width:1024px) {
     .global-nav-bar-wrap { 

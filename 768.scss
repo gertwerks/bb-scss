@@ -1072,11 +1072,6 @@ and (max-width:1024px) {
      #standards-column.colspan2 {
          border: 0px;
      }
-
-    .inventoryListCardView div.block {
-        height: 160px;
-    }
-
 }
 
 // iPads (portrait) ----------- */
@@ -1095,7 +1090,6 @@ and (orientation : portrait) {
     .isUltra .contentPane {
         z-index: 1;
         position: fixed;
-        width: 530px;
         -webkit-transition: width 300ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
         -moz-transition: width 300ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
         transition: width 300ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
@@ -1364,6 +1358,18 @@ and (min-device-pixel-ratio: 2) {
         border-bottom: 0;
     }
 
+    .inventoryListTableContainerDiv table, 
+    .inventoryListTableContainerDiv tbody, 
+    .inventoryListTableContainerDiv th, 
+    .inventoryListTableContainerDiv td, 
+    .inventoryListTableContainerDiv tr {
+        display: block;
+    }
+
+    .inventoryListTableContainerDiv thead {
+        display: none;
+    }
+
     .inventoryListTableContainerDiv tr {
         border: 1px solid #ccc;
         box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.14);
@@ -1417,6 +1423,11 @@ and (min-device-pixel-ratio: 2) {
         float: left;
     } 
     
+    .inventoryListTableContainerDiv table.inventory>tbody tr td.smallCell .mobile-table-label, 
+    .inventoryListTableContainerDiv table.inventory>thead tr th.smallCell .mobile-table-label{
+        display: none;
+    }
+
     div.field, div.noLabelField {
         width: 100%;
     }
@@ -1426,6 +1437,8 @@ and (min-device-pixel-ratio: 2) {
      }
 
     span.mobile-table-label {
+        display: block;
+        float: left;
         text-align: left;
         padding-right: 7px;
         padding-right: 7px;

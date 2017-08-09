@@ -426,6 +426,355 @@ body.picker .locationPane {
 
 /* @end LAYOUT PANES*/
 
+/* @group TOP FRAME
+----------------------------------------------- */
+
+/* @group TOP FRAME LAYOUT */
+
+/*Branding image container.*/
+#topFrame /*@branding - do not remove*/,
+    /*---*/
+.bgBanner {
+    background-color: #555;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #CCCCCC;
+}
+
+.brandingImgWrap a {
+    display: inline-block;
+    position: absolute;
+}
+
+.brandingImgWrap a:focus {
+    outline-color: #CCC;
+}
+
+.bannerImage {
+    max-height: 35px;
+}
+
+/*Branding image, hot spots and hot links are hidden when compact tabs are used*/
+.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap, .topTabs-compact .hotItems {
+    display: none;
+}
+
+/*Regular tabs*/
+.topTabs {
+    padding: 0;
+    background-color: #333 !important; /*@pal*/
+    box-shadow: none !important;
+    color: #FFFFFF !important;
+    height: 100% !important;
+}
+
+/*Compact tabs*/
+.topTabs-compact {
+    height: 52px;
+}
+
+/*Tab wrapper*/
+.tabWrapper-left, .tabWrapper-center, .tabWrapper-right {
+    width: auto;
+    padding: 0 28px;
+}
+
+/*Table that contains application tabs*/
+/*Regular tabs*/
+.appTabs {
+    width: auto;
+    position: relative;
+}
+
+.topTabs-compact .tabWrapper-left, .topTabs-compact .tabWrapper-center, .topTabs-compact .tabWrapper-right {
+    padding-top: 24px;
+}
+
+/* @end */
+
+/* @group APPLICATION TABS */
+
+/*Application tabs*/
+/*Regular tabs*/
+.appTabs a {
+    font-size: 110%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 10px 1.2em 19px;
+    color: #cdcdcd !important;
+    z-index: 100;
+    white-space: nowrap;
+    position: relative;
+    border: 1px solid transparent;
+    border-width: 1px 1px 0;
+    -moz-border-radius: 0px 0px 0 0;
+    -webkit-border-radius: 0px 0px 0 0;
+    border-radius: 0px 0px 0 0;
+}
+
+/*@branding - do not remove*/
+#topTab {
+    background: transparent;
+    color: #666;
+}
+
+.appTabs a span {
+    padding-bottom: 1px;
+    border-bottom: 0px;
+}
+
+.topTabs-compact .appTabs a span {
+    padding-bottom: 0;
+}
+
+.appTabs a:hover, .appTabs a:focus {
+    color: #666;
+}
+
+.appTabs a:hover span, .appTabs a:focus span {
+    border-bottom: 1px double #FFF;
+}
+
+/*@branding - do not remove*/
+#topTabActive,
+.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+    font-weight: bold;
+    z-index: 1000;
+    text-shadow: none !important;
+    color: #FFFFFF !important;
+}
+
+.appTabs td.active {
+    border-bottom: 3px solid #c56fd5;
+}
+
+.appTabs td {
+    padding-bottom: 14px !important
+}
+
+#topTabActive, .appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+    color: #333333;
+}
+
+.appTabs .active a span, .appTabs .active a:hover span, .appTabs .active a:focus span {
+    border: 0;
+}
+
+.appTabs .active .hideoff,
+.appTabs .active a:hover .hideoff,
+.appTabs .active a:focus .hideoff,
+.toppTabs-compact .appTabs .active .hideoff,
+.toppTabs-compact .appTabs .active a:hover .hideoff,
+.toppTabs-compact .appTabs .active a:focus .hideoff {
+    bottom: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 0;
+    border-bottom: 14px solid #fff;
+    margin-left: -14px;
+    bottom: 0px;
+    line-height: 0;
+    left: 50%;
+    top: auto;
+    color: transparent;
+    font-size: 0;
+    z-index: 100;
+
+}
+
+.topTabs-compact .appTabs .active .hideoff,
+.topTabs-compact .appTabs .active a:hover .hideoff,
+.topTabs-compact .appTabs .active a:focus .hideoff {
+    border-width: 0 7px 7px;
+    margin-left: -7px;
+}
+
+.topTabs-compact .appTabs a,
+.topTabs-compact .appTabs .active a:hover,
+.topTabs-compact .appTabs .active a:focus {
+    font-size: 95%;
+    padding: 0.4em 1em .7em;
+}
+
+/*Rounding options*/
+.round1 a {
+    -moz-border-radius: 0px 0px 0 0;
+    -webkit-border-radius: 0px 0px 0 0;
+    border-radius: 0px 0px 0 0;
+}
+
+.round2 a {
+    -moz-border-radius: 12px 12px 0 0;
+    -webkit-border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
+}
+
+/* @end */
+
+/* @group TOP FRAME LINKS (HOME, HELP, LOGOUT)
+----------------------------------------------- */
+
+/*Top frame links*/
+
+.topGlobalLinks {
+    background-color: rgba(0, 0, 0, 0.15);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
+}
+
+.topGlobalLinks ul {
+    z-index: 1001;
+}
+
+.topGlobalLinks ul li {
+    color: #ccc;
+    display: inline-block;
+    margin: 0 0 0 -4px;
+}
+
+.topGlobalLinks ul li:first-child {
+    margin: 0;
+}
+
+#breadcrumbs ol li:nth-child(2) {
+    border-left: 1px solid #dadada;
+    padding: 2px 20px 0px 10px;
+}
+
+#breadcrumbs ol li:nth-child(3) {
+    padding: 2px 20px 0px 10px;
+}
+
+#breadcrumbs ol li:nth-child(4) {
+    padding: 2px 20px 0px 10px;
+}
+
+#breadcrumbs ol li:nth-child(5) {
+    padding: 2px 20px 0px 10px;
+}
+
+#breadcrumbs ol li:nth-child(6) {
+    padding: 2px 20px 0px 10px;
+}
+
+.topGlobalLinks a {
+    display: inline-block;
+    color: #ccc;
+    text-align: left;
+    padding: 3px 5px;
+    text-indent: -10000px;
+    min-width: 18px;
+    overflow: hidden;
+    background: none !important;
+}
+
+.topGlobalLinks a .link-icon {
+    background-image: url(images/utilicons_sprite_rev.png);
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+}
+
+.topGlobalLinks .home .link-icon {
+    background-position: -129px 0;
+}
+
+.topGlobalLinks .home:hover .link-icon,
+.topGlobalLinks .home:focus .link-icon {
+    background-position: -129px -16px;
+}
+
+.topGlobalLinks .logout .link-icon {
+    display: none;
+}
+
+.topGlobalLinks .logout {
+    text-indent: 0;
+    padding: 2px 9px;
+    width: auto !important;
+}
+
+.topGlobalLinks .help .link-icon {
+    background-position: -145px 1px;
+}
+
+.topGlobalLinks .help:hover .link-icon,
+.topGlobalLinks .help:focus .link-icon {
+    background-position: -145px 1px;
+}
+
+.topGlobalLinks a:hover,
+.topGlobalLinks a:focus {
+    color: #eee;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025);
+}
+
+/* @end TOP FRAME LINKS*/
+
+/* @group TOP FRAME HOT ITEMS
+----------------------------------------------- */
+
+.hotItems {
+    position: relative;
+    margin-right: 3px;
+    width: 240px;
+    min-height: 28px;
+    color: #ddd;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.20);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
+}
+
+.hotSpots {
+    max-height: 46px;
+    overflow: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px 3px 5px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hotSpots li {
+    display: inline-block;
+    display: inline \9; /*IE8*/
+    padding: 0 0 2px;
+}
+
+.hotSpots a {
+    text-decoration: underline;
+    background: transparent;
+    color: #ddd;
+    display: inline-block;
+    padding: 0 6px 0 0;
+}
+
+.hotSpots li:after {
+    content: "\2022";
+    color: #999999;
+    position: relative;
+    right: 1px;
+}
+
+.hotSpots li:last-child:after {
+    content: none;
+}
+
+.hotSpots a:hover,
+.hotSpots a:focus {
+    color: #eee;
+}
+
+/* @end TOP FRAME HOT*/
+
+/* @end TOP FRAME */
 
 /* @group BREADCRUMBS
 ----------------------------------------------- */
@@ -2826,6 +3175,7 @@ a.close:hover:before, a.close-menu:hover:before {
 
 .builderItem a.close {
     opacity: 1;
+    filter: alpha(opacity:0);
 }
 
 .liveArea a.close {
@@ -2996,7 +3346,6 @@ a.cancel {
     font-weight: bold;
     padding: 8px 18px 8px 12px;
     text-decoration: none;
-    margin: 20px;
 }
 
 .shortDoc .backLink a {
@@ -3781,7 +4130,11 @@ ul.nav.clearfix.u_floatThis-right:after,
     padding-top: 6px;
 }
 
+#courseMenuPalette div.navPaletteContent {
+    padding-top: 14px;
+    padding-bottom: 14px;
 
+}
 
 #courseMenuPalette .cmLink-empty img {
     display: none;
@@ -3819,6 +4172,16 @@ ul.nav.clearfix.u_floatThis-right:after,
     word-break: normal;
     overflow-x: hidden;
     color: #FFFFFF;
+}
+
+div.navPaletteContent ul li a,
+#courseMenuPalette h3 a,
+#previewCourseMenu h3 a,
+.navPaletteContent h3 a.submenuLink:before,
+.navPaletteContent h3 a.submenuLink_active:before,
+div.navPaletteContent ul li a span,
+.navPaletteContent .subhead {
+
 }
 
 .navPaletteContent a:hover, .navPaletteContent a:focus {
@@ -3899,9 +4262,11 @@ ul.nav.clearfix.u_floatThis-right:after,
 }
 
 #courseMenuPalette div.navPaletteContent {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    background-color: $course-menu-bgcolor;
+    background-color: #333333 !important;
+}
+
+#courseMenuPalette ul {
+    background-color: #333;
 }
 
 #courseMenuPalette ul a:hover, #courseMenuPalette ul span:hover {
@@ -3935,11 +4300,13 @@ ul.nav.clearfix.u_floatThis-right:after,
 .tools a.submenuLink:after, .tools a.submenuLink_active:after,
 .navPaletteContent h3 a.submenuLink:before, .navPaletteContent h3 a.submenuLink_active:before {
     color: #666;
-    top: 3px;
+    top: 5px;
     right: 4px;
     position: relative;
     font-weight: bold;
     font-size: 16px;
+    font-family: FontAwesome;
+    content: '\f0a9';
 }
 
 .navPaletteContent h3 a.submenuLink:before, .navPaletteContent h3 a.submenuLink_active:before {
@@ -5936,6 +6303,8 @@ td.removeCell span a img {
     width: 49%;
     padding: 0;
     margin: 0;
+    max-height: 116px;
+    border: 1px solid #ccc;
 }
 
 .iconsOnly > li:first-child {
@@ -10527,7 +10896,7 @@ select.survey_question {
     min-width: 300px !important;
 }
 
-.htmlarea iframe html head {
+.htmlarea iframe html head style[html, body] {
     font-family: "Open Sans", sans-serif;
 }
 .htmlarea .toolbar a.wikiButton, .htmlarea .toolbar a.wikiButton img {
@@ -13224,6 +13593,28 @@ p#top_submitButtonRow input {
     display: none;
 }
 
+table.bouncer {
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.global-nav-bar-wrap {
+    background-color: #000;
+    width: 100%;
+    height: 0px;
+}
+
+.global-nav-bar {
+    margin: 0px 10px;
+}
+
+.topTabs .tabWrapper-right {
+    height: 66px;
+}
+
+.topTabs .tabWrapper-right .appTabs {
+    height: 100%;
+}
+
 .cmdiv li.contextmenubar_top a, .cmdiv li.contextmenubar_top a:focus, .cmdiv li.contextmenubar_top a:hover, .currentTags a.closeCloud, .currentTags a.closeCloud:hover, .currentTags a.closeCloud:focus {
     background: #ffffff !important;
 
@@ -13546,6 +13937,62 @@ span.mobile-table-label {
     padding-left: 10px;
 }
 
+@media only screen and (min-width:1300px) {
+    #puller a: after {
+        position: absolute;
+        left: 9px;
+        top: 200px;
+    }
+    
+    div[id*="_bb_mashupbutton"][role="listbox"] {
+        left: 401px !important;
+    }
+
+    .bodynavcollapsed div[id*="_bb_mashupbutton"] {
+        left: 203px !important;
+    }
+
+    div[id*="_forecolor_menu"][role="listbox"]{
+        left: 745px !important;
+    }
+
+    .bodynavcollapsed div[id*="_forecolor_menu"] {
+        left: 547px !important;
+    }
+
+    div[id*="_backcolor_menu"][role="listbox"] {
+        left: 785px !important;
+    }
+
+    .bodynavcollapsed div[id*="_backcolor_menu"] {
+        left: 587px !important;
+    }
+
+    div[id*="_numlist_menu"][role="listbox"] {
+        left: 704px !important;
+    }
+
+    .bodynavcollapsed div[id*="_numlist_menu"] {
+        left: 506px !important;
+    }
+
+    div[id*="_bullist_menu"][role="listbox"] {
+        left: 665px !important;
+    }
+
+    .bodynavcollapsed div[id*="_bullist_menu"] {
+        left: 467px !important;
+    }
+
+    div[id*="_spellchecker_menu"][role="listbox"] {
+        left: 813px !important;
+    }
+
+    .bodynavcollapsed div[id*="_spellchecker_menu"] {
+        left: 615px !important;
+    }
+
+}
 
 
 
