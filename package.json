@@ -1,0 +1,13 @@
+{
+  "name": "blackboard-learn-scss",
+  "version": "3200.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gertwerks/bb-scss.git"
+  },
+  "author": "Blackboard Inc",
+  "bugs": {
+    "url": "https://github.com/gertwerks/bb-scss/issues"
+  },
+  "homepage": "https://github.com/gertwerks/bb-scss#readme"
+}
