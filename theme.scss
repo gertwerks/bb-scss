@@ -1,15 +1,10 @@
-/* BBLEARN 2012
-================================================*/
 
-@import url("ultra_fonts.css");
+/* Import common files here so they can be imported and minified.  Less http requests and smaller files */
 
-/*Core styles*/
-@import url("core.css");
-
-/*Theme-specific styles*/
-@import url("theme_specific.css");
+/* common files */
 
 /*Tools*/
+
 @import url("grading_common.css");
 @import url("interactive.css");
 @import url("login.css");
@@ -17,19 +12,30 @@
 @import url("wizard.css");
 
 /*Service Packs*/
+
 @import url("sp6.css");
 @import url("sp8.css");
 @import url("sp10.css");
 @import url("sp12.css");
 
 /*Temporary external stylesheet*/
+
 @import url("external.css");
 
+/* end common files */
+
+
+/* BBLEARN 2016
+================================================*/
+
+@import url("ultra_fonts.css");
+
+/*Theme-specific styles*/
+@import url("theme_specific.css");
+
 /*Responsive*/
-@import url("480.css");
-@import url("768.css");
+@import url("tablets.css");
+@import url("phones.css");
 
-@import url("custom.css")
-
-/* /BBLEARN 2012
+/* /BBLEARN 2016
 ================================================*/

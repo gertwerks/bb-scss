@@ -31,6 +31,7 @@ table.bouncer td {
     position: relative;
     overflow-y:hidden;
     height: 86px;
+
 }
 
 /*Compact tabs*/
@@ -83,10 +84,11 @@ table.bouncer td {
 }
 
 .brandingImgWrap img {
-    left: 27px;
+    left: 20px;
     max-height: 50px;
+    max-width: 140px;
     position: absolute;
-    top: 30px;
+    top: 7px;
     z-index: 9001;
 }
 
@@ -100,12 +102,13 @@ table.bouncer td {
     background-color: #000;
     width: 100%;
     height: 0px;
+    background: #333;
 }
 
 /*Regular tabs*/
 .topTabs {
     padding: 0;
-    background-color: $header-bgcolor; /*@pal*/
+    background-color: #555; /*@pal*/
     -moz-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
     -webkit-box-shadow: 0 -6px 17px #333 inset; /*@pal*/
     box-shadow: 0 -6px 17px #333 inset; /*@pal*/
@@ -175,8 +178,15 @@ table.bouncer td {
     padding-bottom: 0;
 }
 
+
+.appTabs a:hover, .appTabs a:focus {
+    color:#fff;
+}
+
 .appTabs a:hover span, .appTabs a:focus span {
     border: 0px !important;
+    color: #fff;
+
 }
 
 /*@branding - do not remove*/
@@ -228,6 +238,63 @@ table.bouncer td {
 .topTabs-compact  .appTabs .active a:focus {
     font-size: 95%;
     padding: 0.4em 1em .7em;
+}
+
+.appTabs a {
+    color: #cdcdcd;
+    -moz-border-radius: 0px 0px 0 0;
+    -webkit-border-radius: 0px 0px 0 0;
+    border-radius: 0px 0px 0 0;
+}
+
+.appTabs a:hover span,
+.appTabs a:focus span {
+    border-bottom: 1px double #FFF;
+}
+
+/*@branding - do not remove*/
+#topTab {
+    background: transparent;
+    color: #666;
+}
+
+.appTabs a span {
+    padding-bottom: 1px;
+    border-bottom: 0px;
+}
+
+.appTabs a:hover, .appTabs a:focus {
+    color: #666;
+}
+
+/*@branding - do not remove*/
+#topTabActive,
+.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+    font-weight: bold;
+    z-index: 1000;
+    text-shadow: none !important;
+    color: #FFFFFF !important;
+}
+
+.appTabs td.active {
+    border-bottom: 3px solid #c56fd5;
+}
+
+.appTabs td {
+    padding-bottom: 14px !important
+}
+
+#topTabActive, .appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
+    color: #333333;
+}
+
+.appTabs .active .hideoff,
+.appTabs .active a:hover .hideoff,
+.appTabs .active a:focus .hideoff,
+.toppTabs-compact .appTabs .active .hideoff,
+.toppTabs-compact .appTabs .active a:hover .hideoff,
+.toppTabs-compact .appTabs .active a:focus .hideoff {
+    border-bottom: 14px solid #fff;
 }
 
 
@@ -417,100 +484,29 @@ table.bouncer td {
 }
 /* // end GLOBAL NAV // */
 
-#quick_links_wrap{
-    top:12px!important;
+
+#quick_links_wrap {
+    width: 20px;
+    overflow: hidden;
 }
 
-.quickLinksOnly #quick_links_wrap {
-  top: 0 !important;
+#quick_links_wrap:hover {
+    width: 100px;
+    overflow: visible;
+    left: -10px;
+    background: #333;
+}
+
+#quick_links_wrap a {
+    position: absolute;
+    right: 0px;
 }
 
 #globalNavPageNavArea{
-    background:#232323;
+    background:#555;
 }
 
-/* @group APPLICATION TABS */
-
-/*Application tabs*/
-/*Regular tabs*/
-.appTabs a {
-    font-size: 110%;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    padding: 10px 1.2em 19px;
-    color: $tab-font-color;
-    z-index: 100;
-    white-space: nowrap;
-    position: relative;
-    border: 1px solid transparent;
-    border-width: 1px 1px 0;
-    -moz-border-radius: 0px 0px 0 0;
-    -webkit-border-radius: 0px 0px 0 0;
-    border-radius: 0px 0px 0 0;
-}
-
-/*@branding - do not remove*/
-#topTab {
-    background: transparent;
-    color: #666;
-}
-
-.appTabs a span {
-    padding-bottom: 1px;
-    border-bottom: 0px;
-}
-
-.topTabs-compact .appTabs a span {
-    padding-bottom: 0;
-}
-
-.appTabs a:hover, .appTabs a:focus {
-    color: $tab-active-hover-font-color;
-}
-
-.appTabs a:hover span, .appTabs a:focus span {
-    border-bottom: 1px double #FFF;
-}
-
-/*@branding - do not remove*/
-#topTabActive,
-.appTabs .active a, .appTabs .active a:hover, .appTabs .active a:focus {
-    font-weight: bold;
-    z-index: 1000;
-    text-shadow: none;
-    color: $tab-active-hover-font-color;
-}
-
-.appTabs td.active {
-    border-bottom: 3px solid $tab-indicator;
-}
-
-.appTabs td {
-    padding-bottom: 14px !important
-}
-
-.appTabs .active a span, .appTabs .active a:hover span, .appTabs .active a:focus span {
-    border: 0;
-}
-
-.topTabs-compact .appTabs .active .hideoff,
-.topTabs-compact .appTabs .active a:hover .hideoff,
-.topTabs-compact .appTabs .active a:focus .hideoff {
-    border-width: 0 7px 7px;
-    margin-left: -7px;
-}
-
-.topTabs-compact .appTabs a,
-.topTabs-compact .appTabs .active a:hover,
-.topTabs-compact .appTabs .active a:focus {
-    font-size: 95%;
-    padding: 0.4em 1em .7em;
-}
-
-table.bouncer {
-    border-bottom: 1px solid #cdcdcd;
-}
+/* moved from theme 2106 css */
 
 .global-nav-bar-wrap {
     background-color: #000;
@@ -530,279 +526,39 @@ table.bouncer {
     height: 100%;
 }
 
-/*Rounding options*/
-.round1 a {
-    -moz-border-radius: 0px 0px 0 0;
-    -webkit-border-radius: 0px 0px 0 0;
-    border-radius: 0px 0px 0 0;
+/* Higher contrast outlines for dark backgorunds */
+/* manin/global navigation */
+.appTabs input:focus, .appTabs button:focus, .appTabs select:focus, .appTabs a:focus,
+/* my bb links and logout */
+.global-nav-bar input:focus, .global-nav-bar button:focus, .global-nav-bar  select:focus, .global-nav-bar  a:focus,
+/* mybb side nav */
+.mybb-tools input:focus, .mybb-tools button:focus, .mybb-tools  select:focus, .mybb-tools  a:focus,
+.mybb-div .side-nav input:focus, .mybb-div .side-nav button:focus, .mybb-div .side-nav select:focus, .mybb-div .side-nav a:focus,
+/* course menu */
+.navPalette input:focus, .navPalette button:focus, .navPalette select:focus, .navPalette a:focus,
+/* inline grading headers */
+.gradeHeader input:focus, .gradeHeader button:focus, .gradeHeader select:focus, .gradeHeader a:focus, 
+.gradingPanelHeader input:focus, .gradingPanelHeader button:focus, .gradingPanelHeader select:focus, .gradingPanelHeader a:focus,
+.inlineGrader .resizeControls input:focus, .inlineGrader .resizeControls button:focus, .inlineGrader .resizeControls select:focus, .inlineGrader .resizeControls a:focus  {
+    outline: 2px solid #e3b7eb;
 }
-
-.round2 a {
-    -moz-border-radius: 12px 12px 0 0;
-    -webkit-border-radius: 12px 12px 0 0;
-    border-radius: 12px 12px 0 0;
-}
-
-/* @end */
-
-/* @group TOP FRAME LINKS (HOME, HELP, LOGOUT)
------------------------------------------------ */
-
-/*Top frame links*/
-
-.topGlobalLinks {
-    background-color: rgba(0, 0, 0, 0.15);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
-}
-
-.topGlobalLinks ul {
-    z-index: 1001;
-}
-
-.topGlobalLinks ul li {
-    color: #ccc;
-    display: inline-block;
-    margin: 0 0 0 -4px;
-}
-
-.topGlobalLinks ul li:first-child {
-    margin: 0;
-}
-
-#breadcrumbs ol li:nth-child(2) {
-    border-left: 1px solid #dadada;
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(3) {
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(4) {
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(5) {
-    padding: 2px 20px 0px 10px;
-}
-
-#breadcrumbs ol li:nth-child(6) {
-    padding: 2px 20px 0px 10px;
-}
-
-.topGlobalLinks a {
-    display: inline-block;
-    color: #ccc;
-    text-align: left;
-    padding: 3px 5px;
-    text-indent: -10000px;
-    min-width: 18px;
-    overflow: hidden;
-    background: none !important;
-}
-
-.topGlobalLinks a .link-icon {
-    background-image: url(images/utilicons_sprite_rev.png);
-    background-repeat: no-repeat;
-    display: block;
-    float: right;
-    height: 16px;
-    width: 16px;
-    overflow: hidden;
-}
-
-.topGlobalLinks .home .link-icon {
-    background-position: -129px 0;
-}
-
-.topGlobalLinks .home:hover .link-icon,
-.topGlobalLinks .home:focus .link-icon {
-    background-position: -129px -16px;
-}
-
-.topGlobalLinks .logout .link-icon {
-    display: none;
-}
-
-.topGlobalLinks .logout {
-    text-indent: 0;
-    padding: 2px 9px;
-    width: auto !important;
-}
-
-.topGlobalLinks .help .link-icon {
-    background-position: -145px 1px;
-}
-
-.topGlobalLinks .help:hover .link-icon,
-.topGlobalLinks .help:focus .link-icon {
-    background-position: -145px 1px;
-}
-
-.topGlobalLinks a:hover,
-.topGlobalLinks a:focus {
-    color: #eee;
-    background-color: rgba(0, 0, 0, 0.25) !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025";
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025);
-}
-
-/* @end TOP FRAME LINKS*/
-
-/* @group TOP FRAME HOT ITEMS
------------------------------------------------ */
-
-.hotItems {
-    position: relative;
-    margin-right: 3px;
-    width: 240px;
-    min-height: 28px;
-    color: #ddd;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.20);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
-}
-
-.hotSpots {
-    max-height: 46px;
-    overflow: auto;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 3px 3px 5px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.hotSpots li {
-    display: inline-block;
-    display: inline \9; /*IE8*/
-    padding: 0 0 2px;
-}
-
-.hotSpots a {
-    text-decoration: underline;
-    background: transparent;
-    color: #ddd;
-    display: inline-block;
-    padding: 0 6px 0 0;
-}
-
-.hotSpots li:after {
-    content: "\2022";
-    color: #999999;
-    position: relative;
-    right: 1px;
-}
-
-.hotSpots li:last-child:after {
-    content: none;
-}
-
-.hotSpots a:hover,
-.hotSpots a:focus {
-    color: #eee;
-}
-
-
-/* @group TOP FRAME
------------------------------------------------ */
-
-/* @group TOP FRAME LAYOUT */
-
-/*Branding image container.*/
-#topFrame /*@branding - do not remove*/,
-    /*---*/
-.bgBanner {
-    background-color: #555;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    color: #CCCCCC;
-}
-
-.brandingImgWrap a {
-    display: inline-block;
-    position: absolute;
-}
-
-.brandingImgWrap a:focus {
-    outline-color: #CCC;
-}
-
-.bannerImage {
-    max-height: 35px;
-}
-
-/*Branding image, hot spots and hot links are hidden when compact tabs are used*/
-.topTabs-compact .bannerImage, .topTabs-compact .brandingImgWrap, .topTabs-compact .hotItems {
-    display: none;
-}
-
-/*Regular tabs*/
-.topTabs {
-    padding: 0;
-    background-color: $header-bgcolor;
-    box-shadow: none !important;
-    color: #FFFFFF !important;
-    height: 100% !important;
-}
-
-/*Compact tabs*/
-.topTabs-compact {
-    height: 52px;
-}
-
-/*Tab wrapper*/
-.tabWrapper-left, .tabWrapper-center, .tabWrapper-right {
-    width: auto;
-    padding: 0 28px;
-}
-
-/*Table that contains application tabs*/
-/*Regular tabs*/
-.appTabs {
-    width: auto;
-    position: relative;
-}
-
-.topTabs-compact .tabWrapper-left, .topTabs-compact .tabWrapper-center, .topTabs-compact .tabWrapper-right {
-    padding-top: 24px;
-}
-
-/* @end */
-
-/* @end TOP FRAME HOT*/
 
 /* @end TOP FRAME */
 
-/*All mobile and tablets*/
+
 @media only screen and (min-width:320px) and (max-width:1024px) {
+
+    /*hamburgers*/
+
     .global-nav-bar-wrap { 
         position: fixed;
-        height: 44px;
         z-index: 9009;
     }
-}
-/*Tablet Styles*/
-@media only screen and (min-width:668px) and (max-width:1024px) {
-    #globalNavPageNavArea {
-        height: auto !important;
-        margin-top: 44px;
-        overflow-y: hidden;
-        overflow-x: scroll;
+    
+    #quick_links_wrap {
+        visibility: hidden;
     }
 
-    .topTabs { 
-        padding-top: 20px;
-    }
-
-    .brandingImgWrap {
-        height: 0px;
-    }
-}
-/*responsive nav styles form myBB and other similar pages that use app_nav.css but not 480.css*/
-@media only screen and (min-width:320px) and (max-width:667px) {
     .brandingImgWrap {
         position: fixed;
         width: 71px;
@@ -822,62 +578,88 @@ table.bouncer {
         display: none;
     }
     
-    .global-nav-bar-wrap { 
-        position: fixed;
-        height: 35px;
-        padding-top: 9px;
-    }
-
-    .mybb-shell .global-nav-bar {
-        padding-right: 10px;
-    }
-
     /*global nav*/
 
     .global-nav-bar-wrap { 
         position: fixed;
         height: 35px;
         padding-top: 9px;
+        background-color: transparent;
     }
 
-    .nav-link {
+    .mybb-shell .global-nav-bar-wrap {
+        background-color: #333;
+    }
+
+    .global-nav-bar-wrap-mobile-nav {
+        height: 33px;
+        width: auto;
+        top: 0px;
+        position: fixed;
+        visibility: visible;
+    }
+
+    .global-nav-bar {
+        position: relative;
+        width: 100%;
+        height: 44px;
+        margin: 0px;
+    }
+
+    #global-nav .nav-link.u_floatThis-right {
+        float: left;
+        width: 100%;
+        height: 75px;
+        color: transparent;
+    }
+
+
+    #global-nav .nav-link {
         width: 30px;
         box-sizing: border-box;
         overflow: hidden;
         color: transparent;
         background: transparent;
-        height: 34px!important;
-    }
-
-    .global-nav-bar .logout-link {
-        width: 30px;
-    }
-
-    .global-nav-bar {
-        font-size: 13px;
-        height: 30px;
-    }
-
-    #global-nav .global-top-avatar {
-        left: 6px;
-        width: 20px;
-        height: 20px;
-    }
-
-    .global-nav-bar.logout {
-        margin-left: 0;
-        height: 25px;
-        overflow: hidden;
-        margin-top:1px;
-    }
-
-    .nav-link {
         box-sizing: border-box;
-        height: 25px !important;
         background-color: transparent;
         padding-right: 22px;
     }
 
+
+    #global-nav .global-top-avatar {
+        float: left;
+        height: 30px;
+        width: 30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 49px;
+    }
+
+    #badgeTotal {
+        position: absolute;
+        top: 34px;
+        right: 43%;
+    }
+
+    .nav-link:hover, .nav-link:focus {
+        background-color: transparent;
+    }
+
+    .global-nav-bar.logout {
+        position: fixed;
+        top: 10px;
+        right: 5px;
+        height: 20px;
+        width: 30px;
+        left: auto;
+        overflow: hidden;
+    }
+
+    .global-nav-bar .logout-link {
+        width: 30px;
+        background: transparent;
+    }
 
     .nav-link .badge {
         position: relative;
@@ -896,22 +678,163 @@ table.bouncer {
         height: auto;
     }
 
-    body #globalNavPageNavArea {
-        height: auto !important;
-        margin-top: 44px;
-        overflow-y: hidden;
-        overflow-x: scroll;
+    div#global-nav > .hideoff {
+        width: 100%;
+        height: 44px;
+        left: 0px;
+        top: 11px;
+        font-size: 16px;
+        text-align: center;
+        color: #d8d3d3;
     }
 
-    .topTabs .tabWrapper-right .appTabs {
+    .global-toggle {
+        display: none;
     }
+
+    #globalNavPageNavArea {
+        height: 44px;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 1000;
+        overflow: hidden;
+        background: #333;
+    }
+
+    #globalNavPageNavArea.main-nav-open {
+        overflow: visible;
+    }
+
+    .brandingImgWrap {
+        position: fixed;
+        width: 71px;
+        top: -3px;
+        left: 10px;
+        height: 47px !important;
+        z-index: 2000;
+    }
+
+    .brandingImgWrap img {
+        display: none;
+    }
+
 
     .appTabs td {
         padding-bottom: 0 !important;
     }
 
+     /*top frame*/
+    .mobile-nav-menu-icon {
+        visibility: visible;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #fff;
+    }
+
+    .tabWrapper-left, 
+    .tabWrapper-center,
+    .tabWrapper-right {
+        max-height: 0px;
+        position: fixed;
+        top: 44px;
+        z-index: 9000;
+        background: #333;
+        -webkit-transition: height 300ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* Safari */
+        transition:  height 300ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+        height: 0px;
+    }
+
+    table.bouncer {
+        height: 44px;
+        background: #333;
+    }
+
+    table.bouncer td {
+        padding: 0;
+        width: 100%;
+        float: left;
+        height: 44px;
+    }
+
+    .topTabs .tabWrapper-right .appTabs {
+        height: 0px;
+        max-height: 0px;
+        overflow: visible;
+        top: -1000px;
+    }
+    
+    .appTabs td.active {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: #333;
+    }
+
+    .mobile-menu-indicator-arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 7px 7px 7px;
+        border-color: #fff transparent transparent transparent;
+        position: absolute;
+        margin: auto;
+        top: 33px;
+        left: 50%;
+    }
+
+    .main-nav-open .mobile-menu-indicator-arrow {
+        visibility: hidden;
+    }
+
+    .appTabs td.active a {
+        padding-bottom: 7px;
+        position: relative;
+    }
+
+    /* for mybb pages */
+    .mybb-shell .appTabs td:first-of-type {
+       height: 44px;
+    }
+
+    .mybb-shell .appTabs td a:first-of-type {
+        color: #fff;
+        font-weight: bold;
+        z-index: 100;
+        font-weight: normal;
+        padding-bottom: 13px;
+        padding-top: 19px;
+    }
+    
+    .paneTabs ul {
+        margin-left: 0px;
+    }
+
+    .paneTabs ul li:first-of-type {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+        overflow: hidden;
+    }
+
     .flyout-menu {
-        top: 34px;
+        top: 47px;
+        width: 100%;
+        left: 0px;
+        position: fixed;
+    }
+
+    #flyoutMenuContent .mybb-tools {
+        width: 15%;
+    }
+
+    #flyoutMenuContent .accordion-wrapper {
+        width: 85%;
+    }
+
+    #global-list-tools {
+        margin: auto;
     }
 
     .mybb-shell .topTabs-compact {
@@ -921,4 +844,266 @@ table.bouncer {
     .mybb-shell .tabWrapper-right {
         padding-top: 2px;
     }
+
+    #globalNavPageContentArea {
+        top: 44px;
+    }
+
+    #paneTabs {
+        visibility: hidden;
+    }
+
+    .hiddenTabsLink {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    /* open system menu */
+
+    .main-nav-open table.bouncer,
+    .main-nav-open table.bouncer td {
+        height: 667px;
+    }
+
+    .main-nav-open .topTabs .tabWrapper-right .appTabs {
+        height: auto;
+        visibility: visible;
+    }
+    
+    .main-nav-open .topTabs .tabWrapper-left,
+    .main-nav-open .topTabs .tabWrapper-center,
+    .main-nav-open .topTabs .tabWrapper-right {
+        height: 667px;
+        max-height: 667px;
+        overflow-y: auto;
+        padding: 0px;
+        background: transparent;
+        width: 100%;
+    }
+
+
+    .main-nav-open .topTabs .appTabs {
+        height: auto;
+        background-color: #333;
+        /*box-shadow: 0px 0px 9px 3px #666; */
+        top: 0px;
+    }
+
+    .main-nav-open table.bouncer .appTabs td {
+        position: relative;
+        border-bottom: 1px solid #999;
+        height: auto;
+    }
+
+    .main-nav-open .appTabs td.active {
+        position: relative;
+    }
+
+    .main-nav-open .appTabs td a {
+        padding-bottom: 20px;
+        font-size: 16px;
+        height: 22px;
+        text-shadow: none;
+        padding-top: 12px;
+    }
+
+    .main-nav-open .appTabs td ul a {
+        padding-bottom: 10px;
+        font-size: 13px;
+        text-shadow: none;
+    }
+
+    .main-nav-open table.bouncer .appTabs td.active {
+        border-bottom: 1px solid #c56fd5;
+    }
+
+   .main-nav-open table.bouncer .appTabs td.active ul a {
+        border-bottom: 0px;
+   }
+
+    .main-nav-open #paneTabs {
+        visibility: visible;
+        float: left;
+        width: 100%;
+        display: block;
+        background-color: #333;
+    }
+
+    .main-nav-open #paneTabs li {
+        width: 100%;
+        float: left;
+        display: block;
+    }
+
+    .main-nav-open #paneTabs li:first-of-type {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    .main-nav-open #paneTabs .more li:first-of-type {
+        visibility: visible;
+        height: auto;
+    }
+
+    .main-nav-open .appTabs .hiddenTabsLink {
+        height: 0px;
+        padding: 0px;
+    }
+
+    ul#overflowULId {
+        display: block;
+        position: relative;
+    }
+
+    ul#overflowULId {
+        display: block;
+        position: relative;
+        z-index: 90000;
+        background: #333;
+        border: 0px;
+        padding: 0px;
+        margin: 0px;
+        float: left;
+        width: 100%;
+        top: 0px;
+    }
+
+   .main-nav-open .nav .sub ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff !important;
+        padding-left: 0px;
+        font-weight: lighter;
+        font-size: 13px;
+    }
+
+    .mybb-tools li.risktracker a {
+        height: auto;
+        width: auto;
+    }
+
 }
+
+/*Tablet Styles*/
+@media only screen and (min-width:668px) and (max-width:1024px) {
+    .topTabs { 
+        padding-top: 20px;
+    }
+
+    .brandingImgWrap {
+        height: 0px;
+    }
+
+     .global-nav-bar.logout {
+        top: 5px;
+
+    }
+}
+
+/*hamburger css */
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+ 
+.hamburger {
+    padding: 11px 0px 0px 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -7px;
+}
+
+.hamburger-inner::after {
+    bottom: -7px;
+}
+
+
+/*
+   * Squeeze
+   */
+
+.hamburger--squeeze .hamburger-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
