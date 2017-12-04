@@ -4,7 +4,7 @@ https://community.blackboard.com/videos/1641-tutorial-simple-customization-of-th
 
 
 New:
-release/3300.0.1 css changes avaialable in the release/3200.0.1 branch
+release/3300 css changes avaialable in the release/3300 branch
 
 release/3200.0.3 css changes avaialable in the release/3200.0.3 branch
 
