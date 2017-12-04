@@ -3,53 +3,53 @@
 
 
 //Backgrounds
-	$body-bgcolor: #f8f8f8; //defualt #f8f8f8 (content area)
-	$window-bgcolor: #949494; //default #949494 (window background)
+	$body-bgcolor: #380c6b; //defualt #f8f8f8 (content area)
+	$window-bgcolor: #921919; //default #949494 (window background)
 
 //links
-	$link-color: #1874a4; //default #1874a4 - !ensure link color meets accesibility standards!
+	$link-color: #ce435a; //default #1874a4 - !ensure link color meets accesibility standards!
 
 //TopFrame
 
 	//bg colors
-	$header-bgcolor: #333; //default #333 (top frame)
-	$tab-indicator: #c56fd5; //default #c56fd5
+	$header-bgcolor: rgb(15, 21, 102); //default #333 (top frame)
+	$tab-indicator: #88ca93; //default #c56fd5
 
 	//font colors
-	$tab-font-color: #cdcdcd; //default #cdcdcd
-	$tab-active-hover-font-color: #fff; //default #fff
+	$tab-font-color: #08580c; //default #cdcdcd
+	$tab-active-hover-font-color: rgb(92, 11, 11); //default #fff
 
 	
 	//for moobile gloabal navbar bg
-	$gloabNavBarBGcolor: #dab247;//default#000
+	$gloabNavBarBGcolor: #4782da;//default#000
 
 //Course Menu
 	//bg
-	$course-menu-bgcolor: #333; //default #333
+	$course-menu-bgcolor: rgb(31, 128, 90); //default #333
 
 	//font colors
-	$course-menu-font-color: #fff; //default #fff
-	$course-menu-hover-font-color: #c56fd5; //default #c56fd5
+	$course-menu-font-color: rgb(87, 11, 46); //default #fff
+	$course-menu-hover-font-color: #2c7515; //default #c56fd5
 
 //Breadcrumbs
 	//bg
-	$breadcrumb-bgcolor: #fff; //default #fff
+	$breadcrumb-bgcolor: rgb(20, 102, 134); //default #fff
 
 	//font colors
-	$breadcrumb-font-color: #333; //default #333
+	$breadcrumb-font-color: rgb(51, 51, 51); //default #333
 
 //Buttons
 	//primary (submit, ok, etc.)
-	$primary-button-bgcolor: #333; //default #333
-	$primary-button-bgcolor-hover: #fff; //default #FFF
+	$primary-button-bgcolor: rgb(37, 107, 139); //default #333
+	$primary-button-bgcolor-hover: rgb(15, 34, 119); //default #FFF
 
 	//sceondary button (cancel, back, etc.)
-	$secondary-button-bgcolor:#dadada; //default #dadada
-	$secondary-button-bgcolor-hover: #fff; //default #fff
+	$secondary-button-bgcolor:#4e0f40; //default #dadada
+	$secondary-button-bgcolor-hover: rgb(10, 102, 14); //default #fff
 
 
 //Alerts (Reciepts)
-	$positive-alert-bgcolor: #c56fd5; //default #c56fd5
-	$warning-alert-bgcolor: #26d6fd; //default #26d6fd
+	$positive-alert-bgcolor: #2b9442; //default #c56fd5
+	$warning-alert-bgcolor: #18798d; //default #26d6fd
 
 
