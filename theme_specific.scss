@@ -384,8 +384,6 @@ div.loginBody {
 .topGlobalLinks a:focus {
     color: #eee;
     background-color: rgba(0, 0, 0, 0.25)!important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025";
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#44000025, endColorstr=#44000025);
 }
 /* @end TOP FRAME LINKS*/
 
@@ -395,8 +393,6 @@ div.loginBody {
 .hotItems {
     color: #ddd;
     background-color: rgba(0, 0, 0, 0.20);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020";
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#33000020, endColorstr=#33000020);
 }
 
 .hotSpots a {
@@ -603,7 +599,6 @@ div.loginBody {
     text-align: left;
 }
 
-    color: $breadcrumb-font-color;
 /*First element in the breadcrumbs.*/
 
 .path .root,
@@ -1366,7 +1361,7 @@ a.cmimg-small {
 
 .builderItem a.close {
     opacity: 1;
-    filter: alpha(opacity:0);
+   opacity: 0;
 }
 
 .cmdiv a.close-menu {
@@ -4057,7 +4052,7 @@ ol.hierarchy li div.gbData span {
 /* @group VTBE
  ----------------------------------------------- */
 
-.htmlarea iframe html head style[html, body] {
+.htmlarea iframe html head style[html] {
     font-family: "Open Sans", sans-serif;
 }
 
